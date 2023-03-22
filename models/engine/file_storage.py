@@ -8,7 +8,7 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
 
-    def all(self, cls=None):
+   def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         if cls is None:
             return self.__objects
@@ -26,7 +26,7 @@ class FileStorage:
             )
 
     def save(self):
-        """Saves storage dictionary to file"""
+	"""Saves storage dictionary to file"""
         with open(self.__file_path, 'w') as f:
             temp = {}
             temp.update(self.__objects)
